@@ -9,6 +9,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 A Linux Distro with internets
+
 Install git
 ```
 sudo apt-get install git-all
