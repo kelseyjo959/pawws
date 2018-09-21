@@ -1,0 +1,242 @@
+    /* Set height of body and the document to 100% */
+    
+    body {
+        background-image: url("/images/grass.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    
+    .header {
+        background-color: rgb(246, 228, 173);
+    }
+    
+    .tabs {
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+        top: 40px;
+        z-index: 97;
+    }
+    
+    .tablink {
+        background-color: rgb(141, 132, 105);
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        width: auto;
+        flex-grow: 1;
+        font-weight: 500;
+    }
+    
+    .tablink .selectedTab {
+        background-color: #3A535C !important;
+    }
+    
+    .tablink:hover {
+        background-color: #777;
+    }
+    
+    p {
+        display: block;
+        text-align: center;
+    }
+    
+    p .mission_statement {
+        text-align: center;
+        color: white;
+    }
+    
+    .shelterLink {
+        display: table;
+        margin: 0 auto;
+        color: white;
+        text-shadow: 0 0 2px #000;
+        font-weight: 900;
+        text-decoration: none;
+        padding: 2px;
+    }
+    
+    .pet_pen {
+        padding-top: 13px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .pet_pic {
+        display: flex;
+        object-fit: cover;
+        border-top: 2px solid #021a40;
+        border-left: 1px solid #021a40;
+        border-right: 1px solid #021a40;
+    }
+    
+    span.overlay {
+        opacity: 0;
+        position: absolute;
+        transition: .4s ease;
+        background: rgba(104, 159, 176, 0.6);
+    }
+    
+    .pet:hover span.overlay,
+    .pet:active span.overlay {
+        opacity: 1;
+    }
+    
+    ul {
+        list-style-type: none;
+        padding-top: 10px;
+        transform: translate(-12px, 0);
+    }
+    
+    li {
+        font-weight: bold;
+        text-align: center;
+        color: rgba(0, 0, 0, 1);
+        text-shadow: 0 0 2px white;
+    }
+    
+    .endContent {
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        color: white;
+        text-shadow: 0 0 4px #000;
+    }
+    
+    @media only screen and (max-width: 400px) {
+        .tablink {
+            padding: 14px;
+            font-size: 12px;
+        }
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 20px 20px;
+            height: 100%;
+            font-size: 14px;
+        }
+        /* styling for tiling pet picture */
+        .pet_pic {
+            height: 300px;
+            width: 300px;
+            border-left: 2px solid #021a40;
+            border-right: 2px solid #021a40;
+        }
+        span.overlay {
+            height: 300px;
+            width: 300px;
+            transform: translate(2px, -300px);
+        }
+        li {
+            font-size: 25px;
+            padding-top: 5px;
+        }
+        .profile_link {
+            padding-top: 10px;
+            height: 25px;
+            width: 25px;
+        }
+    }
+    
+    @media only screen and (min-width: 401px) and (max-width: 960px) {
+        .tablink {
+            padding: 14px 16px;
+            font-size: 14px;
+        }
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 20px 20px;
+            height: 100%;
+        }
+        /* styling for tiling pet picture */
+        .pet_pic {
+            height: 280px;
+            width: 280px;
+        }
+        span.overlay {
+            height: 280px;
+            width: 280px;
+            transform: translate(2px, -280px);
+        }
+        li {
+            font-size: 23px;
+            padding-top: 3px;
+        }
+        .profile_link {
+            padding-top: 10px;
+            height: 20px;
+            width: 20px;
+        }
+    }
+    
+    @media only screen and (min-width: 961px) and (max-width: 2000px) {
+        .tablink {
+            padding: 14px 16px;
+            font-size: 17px;
+        }
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            color: white;
+            padding: 20px 20px;
+            height: 100%;
+        }
+        /* styling for tiling pet picture */
+        .pet_pic {
+            height: 280px;
+            width: 280px;
+        }
+        /* styling for pet details overlay */
+        span.overlay {
+            height: 280px;
+            width: 280px;
+            transform: translate(2px, -280px);
+        }
+        li {
+            font-size: 23px;
+            padding-top: 2px;
+        }
+        .profile_link {
+            padding-top: 10px;
+            height: 20px;
+            width: 20px;
+        }
+    }
+    
+    @media only screen and (min-width: 2001px) {
+        .tablink {
+            padding: 14px 16px;
+            font-size: 17px;
+        }
+        .tabcontent {
+            color: white;
+            padding: 20px 20px;
+            height: 100%;
+        }
+        .pet_pic {
+            height: 380px;
+            width: 380px;
+        }
+        span.overlay {
+            height: 380px;
+            width: 380px;
+            transform: translate (2px, -380px);
+        }
+        ul {
+            padding-top: 14px;
+        }
+        li {
+            font-size: 32px;
+            padding-top: 8px;
+        }
+        .profile_link {
+            padding-top: 10px;
+            height: 35px;
+            width: 35px;
+        }
+    }

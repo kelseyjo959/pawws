@@ -1,0 +1,20 @@
+block content
+      each pet, i in mongoPetArray
+        div(class='pet'
+            id='#{pet._id}') 
+          .image_container(onclick='void(0)')
+              img(class= 'pet_pic'
+                  src='#{pet.img_url}'
+                  alt="paaws")
+              span.overlay    
+                  ul
+                      li #{pet.name}
+                      li #{pet.species}
+                      li #{pet.gender}
+                      li #{pet.age}
+                      li #{pet.breed}
+                      li
+                        a(href= '#{pet.profile_url}' target= 'blank') 
+                            img(src='/images/home.png'
+                                class='profile_link')
+    

@@ -1,0 +1,29 @@
+extends layout
+
+prepend page 
+    - title = "Pawws"
+    link(rel='stylesheet', href='/stylesheets/petlist.css')
+block header
+    .header#fixthis
+       #message
+          h3 Pawws
+       nav
+         span.nav(onclick='openNav()') &#9776;
+         div(id='mySideNav' class='sideNav')
+           a(href='javascript:void(0)' class='closebtn' onclick='closeNav()') &times
+           a(href='/') Home
+           a(href='about') About
+           a(href='shelters') Shelters
+block section
+    .pet_pen
+      block content
+    .pet_gate
+
+block footer
+  .loader
+    span {
+    span }
+append page
+    script(src='/javascripts/jquery.fixit.js')
+    script(src='/javascripts/jquery.inview.min.js')
+    script(src='/javascripts/gate_keeper.js')

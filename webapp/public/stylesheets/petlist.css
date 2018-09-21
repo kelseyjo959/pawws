@@ -1,0 +1,189 @@
+/*universal style reset selector */
+
+
+/*universal style reset selector */
+
+body {
+    background-image: url("/images/landscape-trees-winter.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.header {
+    background-color: rgb(182, 193, 188);
+}
+
+h1,
+h6 {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.pet_pen {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+
+/* styling for tiling pet picture */
+
+.pet_pic {
+    display: flex;
+    /*gets rid of tiny negative space between rows */
+    object-fit: cover;
+    border-top: 2px solid #021a40;
+    border-left: 1px solid #021a40;
+    border-right: 1px solid #021a40;
+}
+
+
+/* styling for pet details overlay */
+
+span.overlay {
+    /* makes this div opaque */
+    opacity: 0;
+    /* positions overlay content behind pet image */
+    position: absolute;
+    transition: .4s ease;
+    background: rgba(51, 73, 63, 0.6);
+}
+
+.pet:hover span.overlay,
+.pet:active span.overlay {
+    opacity: 1;
+}
+
+ul {
+    list-style-type: none;
+    transform: translate(-12px, 0);
+}
+
+li {
+    font-weight: bold;
+    text-align: center;
+    color: rgba(0, 0, 0, 1);
+    text-shadow: 0 0 2px white;
+}
+
+.endContent {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 400px) {
+    .pet_pic {
+        height: 350px;
+        width: 350px;
+        border-left: 2px solid #021a40;
+        border-right: 2px solid #021a40;
+    }
+    span.overlay {
+        height: 350px;
+        width: 350px;
+        transform: translate(0px, -350px);
+    }
+    ul {
+        padding-top: 18px;
+    }
+    li {
+        font-size: 25px;
+        padding-top: 5px;
+        font-weight: bold;
+        text-align: center;
+        color: rgba(0, 0, 0, 1);
+    }
+    .profile_link {
+        padding-top: 10px;
+        height: 25px;
+        width: 25px;
+    }
+}
+
+
+/* Tablet Styles */
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    .pet_pic {
+        height: 280px;
+        width: 280px;
+    }
+    span.overlay {
+        height: 280px;
+        width: 280px;
+        transform: translate(0px, -280px);
+    }
+    ul {
+        padding-top: 10px;
+    }
+    li {
+        font-size: 23px;
+        padding-top: 3px;
+    }
+    .profile_link {
+        padding-top: 10px;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+
+/* Desktop Styles */
+
+@media only screen and (min-width: 961px) and (max-width: 2000px) {
+    .pet_pic {
+        height: 280px;
+        width: 280px;
+    }
+    span.overlay {
+        height: 280px;
+        width: 280px;
+        transform: translate(0, -280px);
+    }
+    ul {
+        padding-top: 10px;
+    }
+    li {
+        font-size: 23px;
+        padding-top: 2px;
+    }
+    .profile_link {
+        padding-top: 10px;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media only screen and (min-width: 2001px) {
+    .pet_pic {
+        height: 380px;
+        width: 380px;
+    }
+    span.overlay {
+        height: 380px;
+        width: 380px;
+        transform: translate(0, -380px);
+    }
+    ul {
+        padding-top: 14px;
+    }
+    li {
+        font-size: 32px;
+        padding-top: 8px;
+    }
+    .profile_link {
+        padding-top: 10px;
+        height: 35px;
+        width: 35px;
+    }
+}

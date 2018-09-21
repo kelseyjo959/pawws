@@ -1,0 +1,136 @@
+body {
+    background: url("/images/wood.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.Nav {
+    float: right;
+}
+
+span.nav {
+    color: white;
+    padding-right: 5px;
+}
+
+.sideNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    background-color: rgb(28, 30, 22);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sideNav a {
+    padding: 8px 8px 8px 32px;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.sideNav a:hover,
+.sideNav a:active {
+    color: rgb(202, 206, 186);
+}
+
+.sideNav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.highlights {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.rubyList {
+    font-size: 17px;
+    font-weight: bold;
+    text-shadow: 0 0 2px #000;
+    color: white;
+}
+
+span.services,
+span.aggregate {
+    font-size: 17px;
+    color: white;
+    text-decoration: underline;
+}
+
+li {
+    padding-top: 3px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.javaList {
+    padding-left: 30px;
+    font-size: 17px;
+    text-shadow: 0 0 2px #000;
+    font-weight: bold;
+    color: white;
+}
+
+.javaList li {
+    padding-left: 35px;
+}
+
+#block1 {
+    margin-top: 80px;
+}
+
+#boxedIntro {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.intro,
+.mission {
+    font-size: 17px;
+    text-shadow: 0 0 2px #000;
+}
+
+.ruby,
+.java,
+.git {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 17px;
+    text-shadow: 0 0 2px #000;
+}
+
+p {
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+@media only screen and (min-width: 700px) {
+    .intro,
+    .mission,
+    .java,
+    .git,
+    .ruby {
+        font-size: 24px;
+    }
+    .rubyList,
+    .javaList,
+    span.services,
+    span.aggregate {
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,243 @@
+body {
+    padding-top: 0px;
+}
+
+.Nav {
+    float: right;
+}
+
+span.nav {
+    color: white;
+    padding-right: 7px;
+    font-size: 30px;
+}
+
+.sideNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    background-color: rgb(28, 30, 22);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sideNav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sideNav a:hover,
+.sideNav a:active {
+    color: rgb(202, 206, 186);
+}
+
+.sideNav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.parallax-window {
+    min-height: 750px;
+    max-height: 1500px;
+    background: transparent;
+}
+
+.intro,
+.mission {
+    color: white;
+    font-weight: 900;
+    text-shadow: 0px 0px 3px #000;
+    word-spacing: 7px;
+    line-height: 20px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.javaList {
+    color: #fb5f56;
+    text-shadow: 0 0 1px #564e4e;
+    font-weight: 900;
+}
+
+.rubyList {
+    color: whitesmoke;
+    font-weight: 900;
+}
+
+.ruby {
+    text-align: center;
+    font-weight: 900;
+    color: whitesmoke;
+}
+
+.git,
+.java {
+    text-align: center;
+    color: #fb5f56;
+    text-shadow: 0 0 1px #564e4e;
+    font-weight: 900;
+}
+
+li {
+    padding-top: 3px;
+}
+
+
+/* For very small screens to optimize spacing*/
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    #boxedIntro {
+        width: 320px;
+        padding-left: 30px;
+        padding-top: 90px;
+        line-height: 25px;
+    }
+    #boxedRuby {
+        float: right;
+        margin-top: 290px;
+        word-spacing: 8px;
+        font-size: 17px;
+    }
+    .javaList {
+        float: right;
+        padding-top: 70px;
+        padding-right: 40px;
+        font-size: 20px;
+    }
+    #boxedJava {
+        float: left;
+        padding-top: 120px;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 24px;
+        word-spacing: 3px;
+        font-size: 16px;
+    }
+    #boxedGit {
+        float: left;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 24px;
+        word-spacing: 3px;
+        font-size: 16px;
+    }
+    .rubyList {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 961px) and (max-width: 2000px) {
+    #boxedIntro {
+        width: 400px;
+        padding-left: 100px;
+        padding-top: 50px;
+        line-height: 25px;
+    }
+    .intro,
+    .mission {
+        font-size: 17px;
+    }
+    .ruby,
+    .java,
+    .git {
+        word-spacing: 6px;
+        font-size: 20px;
+    }
+    .rubyList {
+        padding-top: 80px;
+        line-height: 25px;
+        font-size: 30px;
+    }
+    li {
+        padding-top: 4px;
+    }
+    #boxedRuby {
+        width: 400px;
+        float: right;
+        padding-top: 60px;
+        padding-right: 20px;
+    }
+    .javaList {
+        float: right;
+        padding-top: 80px;
+        padding-right: 20px;
+        font-size: 30px;
+    }
+    #boxedJava {
+        width: 700px;
+        padding-left: 100px;
+        padding-top: 470px;
+    }
+    #boxedGit {
+        width: 700px;
+        padding-left: 100px;
+        margin-top: 0;
+        line-height: 25px;
+    }
+}
+
+@media only screen and (min-width: 2001px) {
+    span.nav {
+        font-size: 35px;
+    }
+    .parallax-window {
+        min-height: 1400px;
+    }
+    #boxedIntro {
+        width: 400px;
+        padding-left: 100px;
+        padding-top: 70px;
+    }
+    .intro,
+    .mission,
+    .ruby,
+    .java,
+    .git {
+        font-size: 25px;
+    }
+    .rubyList {
+        padding-top: 100px;
+        font-size: 50px;
+    }
+    li {
+        padding-top: 4px;
+    }
+    #boxedRuby {
+        width: 430px;
+        float: right;
+        padding-top: 160px;
+        padding-right: 50px;
+        word-spacing: 4px;
+    }
+    .javaList {
+        float: right;
+        padding-top: 70px;
+        padding-right: 50px;
+        font-size: 45px;
+    }
+    #boxedJava {
+        width: 400px;
+        padding-top: 320px;
+        padding-left: 50px;
+        line-height: 35px;
+        word-spacing: 7px;
+    }
+    #boxedGit {
+        padding-top: 400px;
+        font-size: 25px;
+    }
+}

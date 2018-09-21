@@ -1,0 +1,68 @@
+extends layout
+
+prepend page
+   - title = "Pawws shelters"
+   link(rel='stylesheet', href='/stylesheets/shelters.css')
+block header
+      .header#fixthis
+         #message
+            h3 Shelters of Pawws
+         nav
+            span.nav(onclick='openNav()') &#9776;
+            div(id='mySideNav' class='sideNav')
+              a(href='javascript:void(0)' class='closebtn' onclick='closeNav()') &times
+              a(href='/') Home
+              a(href='about') About
+              a(href='shelters') Shelters
+
+block section
+  #main
+    .tabs
+      button(id='defaultOpen', class='tablink' onclick="openPage('Stray_Rescue_of_St_Louis', this, 'LightSlateGrey')") Stray Rescue of St. Louis
+      button(class='tablink' onclick="openPage('Adopt_a_Senior_Pet', this, 'LightSlateGrey')") Young At Heart Shelter
+      button(class='tablink' onclick="openPage('NYC_Shelter_Buddy', this, 'LightSlateGrey')") NYC Shelter Buddy
+
+    #Stray_Rescue_of_St_Louis.tabcontent.shelter
+      p Stray Rescue of St. Louis has the following mission statement on their website:
+      p.mission_statement.
+          "Since 1998, the mission of Stray Rescue of St. Louis is to lead the way toward making St. Louis a compassionate city where every companion animal knows health, comfort, and affection, and no stray is euthanized merely because he or she has been abandoned, abused, or neglected. Stray Rescue is out on the streets daily taking a progressive, proactive approach to establishing a permanent resolution to the stray companion animal problem through dedicated rescue efforts, sheltering, community outreach programs, education, collaborations and the encouragement of responsible pet guardianship. Stray Rescue of St. Louis is the largest no-kill organization in the city of St. Louis and surrounding area."
+      p.mission_statement.
+          "At Stray Rescue of St. Louis, we believe that every animal is an individual and should be treated as such. Any animal who has the courage to survive the horrors and dangers of street life deserves a chance at health, comfort, love and happiness. We go to great lengths to restore each rescued animal to health – both mentally and physically – before helping them find their loving forever home"
+      p Please check out their site for additional information. 
+      
+      a(href='https://www.strayrescue.org/animals-for-adoption', target='blank', class='shelterLink', id='strayRescue') Shelter Site
+      #pets_of_STL.pet_pen
+        block content
+      .pet_gate
+
+    #Adopt_a_Senior_Pet.tabcontent.shelter
+      p A shelter specializing in finding older pets their forever home near Chicago, Illinois. Here is their mission statement:
+      p.mission_statement.
+          "[Our mission includes] rescuing stray and relinquished senior animals from animal shelters that have not been adopted and are scheduled to be euthanized. Young at Heart takes the animals that are considered “too old” for traditional shelters and rescues and provides them with a chance at a forever home, either with a new loving family, or through our Sanctuary Program."
+      p Continue to their site to learn about adopting a senior pet. 
+
+      a(href='http://www.adoptaseniorpet.com/adopt-a-pet', target='blank', class='shelterLink', id='seniorPet') Shelter Site
+      #pets_of_CHI.pet_pen
+        block content
+      .pet_gate
+
+    #NYC_Shelter_Buddy.tabcontent.shelter
+      p A shelter in New York City
+      p.mission_statement.
+          The NYC Shelter Buddy site is a database containing lost, found and adoptable pets. While their site is under going maintenance, they still update content daily as new pets come in or when pets find their forever home.
+      p To see their database of pets, continue to their website. 
+
+      a(href='http://nycaccpets.shelterbuddy.com/', target='blank', class='shelterLink', id='nycShelter') Shelter Site
+      #pets_of_NYC.pet_pen
+        block content
+      .pet_gate
+
+block footer
+  .loader
+    span {
+    span }
+append page
+    script(src='/javascripts/jquery.fixit.js')
+    script(src='/javascripts/jquery.inview.min.js')
+    script(src='/javascripts/gate_keeper.js')
+          

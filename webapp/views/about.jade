@@ -1,0 +1,67 @@
+extends layout
+
+prepend page
+    - title = "About Pawws"
+block section
+    nav.Nav
+        span.nav(onclick='openNav()') &#9776;
+        div(id='mySideNav' class='sideNav')
+          a(href='javascript:void(0)' class='closebtn' onclick='closeNav()') &times
+          a(href='/') Home
+          a(href='about') About
+          a(href='shelters') Shelters
+    .parallax-content
+        div(id='cat' class='parallax-window' data-parallax='scroll' data-andriod-fix=true data-ios-fix=true)
+            #block1
+            #boxedIntro
+                p.intro.
+                    'Pawws' is my first web application. Before applying to LaunchCode, I needed a project to demonstrate my skills and ability to learn.
+                    Pondering upon my passions with my cats laying by my side, the lightbulb turned on. Having pets while growing up, all of which were 'rescues' or from local shelters, I had my idea.
+                    Using pet shelter websites can be challenging when you don't know what pet you are looking for; you just want to window shop.
+                    I wanted to make the pet adoption experience more organic and fluid similiar to how my family growing up would adopt a pet. 
+                  
+                p.mission.
+                    Pawws makes pet adoption an open-minded, exploratory experience. It is easy to navigate, fun to interact with and makes pet discovery leisurely. 
+
+        div(id='java' class='parallax-window' data-parallax='scroll')
+            #block2
+            ul.javaList
+              span.services
+              li Express
+              li Jade/Pug Templates
+              li Node.js
+              li Javascript
+              li Jquery
+              li AJAX
+              li Fix-It.js
+              li Parrallax.js
+              li Inview.js
+            #boxedJava
+                p.java.
+                    The web content of Pawws is hosted by an Express API paired with a Javascript backend of Node. The infinite scrolling feature is triggered by DOM events that initiate an AJAX request back to the server, where content relevant to the request is rendered using Pug templates. 
+            #boxedGit
+                p.git.
+                    For version control, I utilized Git.
+                    Please email me at kelseyjo959@gmail.com for any questions or concerns.
+
+        div(id='ruby' class='parallax-window' data-parallax='scroll')
+            #block3
+            ul.rubyList
+              span.aggregate
+              li Linux
+              li Debian Stretch
+              li Ruby
+              li Nokogiri
+              li Open-uri
+              li MongoDB
+              li Cron
+            #boxedRuby
+                p.ruby.
+                    The process of pet collection and pet pruning is maintained by Ruby scripts managed by Cron. Within these scripts, I am using Nokogiri and Open-uri to interact and parse the shelter pages which then organize the gathered data into Mongodb.    
+    
+block footer
+append page 
+    link(rel='stylesheet' href='/stylesheets/about.css' id='non-mobile')
+    script(src = '/javascripts/parallax.min.js' id='parallax-js')
+    script(src='/javascripts/about.js')
+    link(rel='stylesheet' href='/stylesheets/about-mobile.css' id='mobile')
